@@ -1,0 +1,134 @@
+.products {
+    background-image: linear-gradient(red, blue);
+
+    .main-cart {
+        display: flex;
+        /* position: absolute; */
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 100%;
+        margin-left: 5%;
+        align-self: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        align-self: center;
+    }
+
+    .card {
+        position: relative;
+        flex-shrink: 0;
+        height: 350px;
+        width: 250px;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 7px 5px -5px #4d4b4b;
+        transition: 0.5s;
+
+        &:hover {
+            height: 400px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+        }
+
+        &:hover .details {
+            bottom: 40px;
+            left: 0;
+            background-color: #22242b71;
+        }
+
+        &:hover .wrapper {
+            display: block;
+          
+        }
+
+        &:hover .purchase {
+            display: block;
+        }
+       
+    }
+
+    .top-bar {
+        transform: translateY(0.5rem);
+        width: 100%;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 1rem;
+    }
+
+    .img-container {
+        position: absolute;
+        height: 185px;
+        width: 185px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        transform: translateY(35px);
+    }
+
+    .details {
+        position: absolute;
+        height: 320px;
+        width: 100%;
+        background-color: #2e2f33;
+        border-radius: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        bottom: -250px;
+        left: 0;
+        transition: 0.25s;
+        color: white;
+    }
+
+    .name-fav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name-fav strong {
+        font-weight: 600;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        transform: translateY(5px);
+        display: none;
+    }
+
+    .details .purchase {
+        display: flex;
+        justify-content: space-between;
+        display: none;
+
+        p {
+            font-weight: 500;
+        }
+
+        .add-btn {
+            border-radius: 20px;
+            border: 1px solid white;
+            background: none;
+            color: white;
+            padding: 6px 10px;
+        }
+
+        .add-btn:hover {
+            background: white;
+            color: black;
+        }
+    }
+
+    .dropdown {
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+
+}
